@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxElokuvarekisteri.GenrejenHallitsemisController">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="498.4000244140625" minWidth="10.0" prefWidth="424.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.4000244140625" minWidth="10.0" prefWidth="176.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="325.40001220703124" minHeight="10.0" prefHeight="311.7999755859375" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="190.8000244140625" minHeight="10.0" prefHeight="87.80002441406253" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ListView fx:id="genrelista" prefHeight="200.0" prefWidth="200.0" />
+            <Button mnemonicParsing="false" onAction="#handleLisaaGenre" text="Lisää Genre" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="200.0" top="60.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleMuokkaaGenrea" text="Muokkaa Genreä" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="100.0" top="80.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handlePoistaGenre" text="Poista Genre" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets top="100.0" />
+               </GridPane.margin></Button>
+            <Label text="Lisää Uusi Genre" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="50.0" left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="genre" maxWidth="300.0" prefWidth="300.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" top="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#handleTallenna" text="Tallenna Muokkaus" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
